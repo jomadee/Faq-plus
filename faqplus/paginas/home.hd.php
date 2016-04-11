@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!--
+<?php
 /**
  *
  * FAQ plus -  lliure 8.x
@@ -10,8 +9,7 @@
  * @Licença http://opensource.org/licenses/gpl-license.php GNU Public License
  *
  */
--->
-<configuracoes>
-	<nome>FAQ plus</nome>
-	<seguranca>public</seguranca>	
-</configuracoes>
+
+ll::api('navigi');
+
+$botoes[] = (array('href' => $_ll['app']['onserver'] . '&p=configurar&ac=nova', 'fa' => 'fa-folder-o', 'title' => 'Criar grupo', 'attr' => "class='novaCtg'"));

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!--
+<?php
 /**
  *
  * FAQ plus -  lliure 8.x
@@ -10,8 +9,10 @@
  * @Licença http://opensource.org/licenses/gpl-license.php GNU Public License
  *
  */
--->
-<configuracoes>
-	<nome>FAQ plus</nome>
-	<seguranca>public</seguranca>	
-</configuracoes>
+
+if(!isset($llTable)){
+    $llTable = PREFIXO . "faqplus";}
+
+$modo = (isset($modo)? '.'. $modo: '');
+
+if(isset($_GET['p']) && file_exists(($f = $_ll['app']['pasta'] . 'paginas/'. $_GET['p']. $modo. '.php'))) require $f;

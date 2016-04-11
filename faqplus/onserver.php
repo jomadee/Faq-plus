@@ -3,16 +3,12 @@
  *
  * FAQ plus -  lliure 8.x
  *
- * @Vers√£o 4.0
+ * @Vers„o 4.0
  * @Desenvolvedor Jeison Frasson <jomadee@lliure.com.br>
  * @Entre em contato com o desenvolvedor <jomadee@lliure.com.br> http://www.lliure.com.br
- * @Licen√ßa http://opensource.org/licenses/gpl-license.php GNU Public License
+ * @LicenÁa http://opensource.org/licenses/gpl-license.php GNU Public License
  *
  */
-$apigem = new api; 
-$apigem->iniciaApi('navigi');
 
-$_GET['p'] = (isset($_GET['p'])? $_GET['p']: 'home');
-$modo = 'hd';
-
+$modo = 'os';
 require dirname(__FILE__). '/load.php';

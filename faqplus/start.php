@@ -1,31 +1,22 @@
 <?php
 /**
-*
-* FAQ plus -  lliure 6.x
-*
-* @Versão 3.0
-* @Desenvolvedor Jeison Frasson <jomadee@lliure.com.br>
-* @Entre em contato com o desenvolvedor <jomadee@lliure.com.br> http://www.lliure.com.br
-* @Licença http://opensource.org/licenses/gpl-license.php GNU Public License
-*
-*/
+ *
+ * FAQ plus -  lliure 8.x
+ *
+ * @Versão 4.0
+ * @Desenvolvedor Jeison Frasson <jomadee@lliure.com.br>
+ * @Entre em contato com o desenvolvedor <jomadee@lliure.com.br> http://www.lliure.com.br
+ * @Licença http://opensource.org/licenses/gpl-license.php GNU Public License
+ *
+ */
 
-$llHome = "?app=faqplus";
-$llPasta = "app/faqplus/";
-$llTable = PREFIXO."faqplus";
+$botoes = array_merge(array(
 
-$botoes = array(
-	array('href' => $backReal, 'img' => $plgIcones.'br_prev.png', 'title' => $backNome)
-	);
+	array('href' => $backReal, 'fa' => 'fa-chevron-left', 'title' => $backNome)
 
+), (isset($botoes)? $botoes: array()));
 
 echo app_bar('FAQ plus', $botoes);
 
-
-$pagina = 'home';
-
-if(isset($_GET['p']) && file_exists($llPasta.$_GET['p'].'.php'))
-	$pagina =  $_GET['p'];
-
-require_once($pagina.'.php');
-?>
+unset($modo);
+require dirname(__FILE__). '/load.php';
